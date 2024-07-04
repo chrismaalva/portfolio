@@ -1,4 +1,4 @@
-export type SliderProps = {
+export type ProjectsListProps = {
     id: number;
     name: string;
     description: string;
@@ -6,7 +6,7 @@ export type SliderProps = {
     imgUrl: string;
 };
 
-export const sliderItems: SliderProps[] = [
+export const projectsList: ProjectsListProps[] = [
     {
         id: 0,
         name: "OCapital",
