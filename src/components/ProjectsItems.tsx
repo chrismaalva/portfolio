@@ -27,7 +27,7 @@ const ProjectsItems: FunctionComponent = () => {
                                 alt="Picture of Christian Martinez"
                                 width={0}
                                 height={0}
-                                className="!w-2/5"
+                                className="!w-2/5 h-full"
                                 unoptimized
                             />
                         </div>
