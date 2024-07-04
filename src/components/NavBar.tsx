@@ -11,11 +11,11 @@ export default function NavBar() {
                 <Link className={linkClasses} href="/">
                     Home
                 </Link>
-                <Link className={linkClasses} href="#about">
-                    About
-                </Link>
                 <Link className={linkClasses} href="/#skills">
                     Skills
+                </Link>
+                <Link className={linkClasses} href="#about">
+                    About
                 </Link>
                 <Link className={linkClasses} href="/#projects">
                     Projects

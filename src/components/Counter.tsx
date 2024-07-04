@@ -16,7 +16,10 @@ export default function Counter({
 }: CounterProps) {
     const [counter, setCounter] = useState(0);
 
-    const counterClasses = classNames(className, "text-3xl font-bold");
+    const containerClasses = classNames(
+        className,
+        "w-full pb-4 flex flex-col justify-center items-center"
+    );
     useEffect(() => {
         const interval = setInterval(() => {
             if (counter < limit) {
@@ -30,9 +33,9 @@ export default function Counter({
     }, [counter, limit]);
 
     return (
-        <div className="w-full pb-4">
-            <span className={counterClasses}>{counter}+</span>
-            <p className="font-medium">{description}</p>
+        <div className={containerClasses}>
+            <span className="text-3xl font-bold">{counter}+</span>
+            <p className="font-medium text-center">{description}</p>
         </div>
     );
 }

@@ -3,22 +3,13 @@ import React from "react";
 import Title from "./Title";
 import Container from "./Container";
 import Button from "./Button";
-import Counter from "./Counter";
 import BgImage from "./BgImage";
 
 export default function About() {
     return (
         <Container id="about">
             <Title title="About" className="text-5xl mb-4" />
-            <div className="flex justify-between">
-                <figure className="w-1/2">
-                    <BgImage
-                        src="/static/images/about-me.jpg"
-                        alt="About me image"
-                        className="w-2/3"
-                        unoptimized
-                    />
-                </figure>
+            <div className="flex">
                 <div className="flex flex-col w-1/2">
                     <Title title="About Me" />
                     <p className="font-medium py-4">
@@ -39,24 +30,16 @@ export default function About() {
                         integrations. I believe in delivering not just code but
                         optimal user experiences that leave a lasting impact.
                     </p>
-                    <div className="flex flex-col items-start justify-center w-1/2 ">
-                        <Counter
-                            limit={5}
-                            description="years of experience in web development"
-                        />
-
-                        <Counter
-                            limit={10}
-                            description="successfully completed projects"
-                        />
-                    </div>
-                    <Button
-                        text="Download CV"
-                        icon="static/icons/document-icon.svg"
-                        iconDescription="Document icon"
-                        className="w-1/4 justify-center my-0"
-                    />
                 </div>
+
+                <figure className="w-1/2 flex items-center justify-center">
+                    <BgImage
+                        src="/static/images/about-me.jpg"
+                        alt="About me image"
+                        className="!w-2/5"
+                        unoptimized
+                    />
+                </figure>
             </div>
         </Container>
     );
