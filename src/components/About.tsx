@@ -2,7 +2,6 @@ import React from "react";
 
 import Title from "./Title";
 import Container from "./Container";
-import Button from "./Button";
 import BgImage from "./BgImage";
 
 export default function About() {

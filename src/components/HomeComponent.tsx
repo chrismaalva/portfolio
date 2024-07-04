@@ -6,7 +6,7 @@ import BgImage from "./BgImage";
 import Counter from "./Counter";
 import Contact from "./Contact";
 
-export default function Home() {
+export default function HomeComponent() {
     return (
         <Container className="flex flex-col justify-center items-center">
             <Title

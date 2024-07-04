@@ -20,6 +20,7 @@ export default function Counter({
         className,
         "w-full pb-4 flex flex-col justify-center items-center"
     );
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (counter < limit) {
