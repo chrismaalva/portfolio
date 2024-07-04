@@ -2,44 +2,37 @@ import React from "react";
 
 import Image from "next/image";
 
-import Container from "./Container";
-import Title from "./Title";
-
 import { ContactInfoArray } from "@/utils/contactInfo";
 
 export default function Contact() {
     return (
-        <Container id="contact">
-            <Title title="Contact me" />
-            <div className="w-full">
-                {ContactInfoArray &&
-                    ContactInfoArray.map((skills) => {
-                        return (
-                            <div className="flex items-center" key={skills.id}>
-                                <figure className="w-[5%]">
-                                    <Image
-                                        key={skills.id}
-                                        src={skills.src}
-                                        alt={skills.alt}
-                                        width={40}
-                                        height={40}
-                                    />
-                                </figure>
-                                <a
-                                    href={
-                                        skills.alt != "Gmail"
-                                            ? skills.description
-                                            : `mailto:chris.maalva@gmail.com?Subject=New%20Job%20Offer`
-                                    }
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    {skills.alt}
-                                </a>
-                            </div>
-                        );
-                    })}{" "}
-            </div>
-        </Container>
+        <div className="w-1/2 flex items-center justify-between mt-4">
+            {ContactInfoArray &&
+                ContactInfoArray.map((skills) => {
+                    return (
+                        <div key={skills.id} className="flex items-center">
+                            <a
+                                href={
+                                    skills.alt != "Gmail"
+                                        ? skills.description
+                                        : `mailto:chris.maalva@gmail.com?Subject=New%20Job%20Offer`
+                                }
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex gap-4 items-center justify-center"
+                            >
+                                <Image
+                                    key={skills.id}
+                                    src={skills.src}
+                                    alt={skills.alt}
+                                    height={30}
+                                    width={30}
+                                />
+                                <span>{skills.alt}</span>
+                            </a>
+                        </div>
+                    );
+                })}{" "}
+        </div>
     );
 }
