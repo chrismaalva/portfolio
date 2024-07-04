@@ -9,7 +9,7 @@ type TitleProps = {
 };
 
 export default function Title({ title, className, titleAsNode }: TitleProps) {
-    const titleClasses = classNames(className, "text-4xl pb-4");
+    const titleClasses = classNames(className, "text-4xl");
     return titleAsNode ? (
         <h3 className={titleClasses}>{titleAsNode}</h3>
     ) : (
