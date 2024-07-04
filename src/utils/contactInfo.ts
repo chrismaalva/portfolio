@@ -26,4 +26,10 @@ export const ContactInfoArray: SkillsProps[] = [
         alt: "GitLab",
         description: "https://gitlab.com/users/Chrismaalva/projects",
     },
+    {
+        id: 5,
+        src: "/static/icons/whatsapp.svg",
+        alt: "WhatsApp",
+        description: "https://wa.me/528141493828",
+    },
 ];
