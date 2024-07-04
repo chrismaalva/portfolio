@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <div className="w-1/2 flex items-center justify-between mt-4">
             {ContactInfoArray &&
-                ContactInfoArray.map((skills) => {
+                ContactInfoArray.map((skills, index) => {
                     return (
                         <div key={skills.id} className="flex items-center">
                             <a
@@ -22,7 +22,7 @@ export default function Contact() {
                                 className="flex gap-4 items-center justify-center"
                             >
                                 <Image
-                                    key={skills.id}
+                                    key={index}
                                     src={skills.src}
                                     alt={skills.alt}
                                     height={30}

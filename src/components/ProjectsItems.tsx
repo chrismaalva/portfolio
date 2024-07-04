@@ -15,13 +15,14 @@ const ProjectsItems: FunctionComponent = () => {
                 each client.
             </p>
             {projectsList &&
-                projectsList.map((project) => {
+                projectsList.map((project, index) => {
                     return (
-                        <div key={project.id}>
+                        <div key={index}>
                             <h3>{project.name}</h3>
                             <p>{project.description}</p>
                             <p>{project.year}</p>
                             <Image
+                                key={project.id}
                                 src={project.imgUrl}
                                 alt="Picture of Christian Martinez"
                                 width={0}
