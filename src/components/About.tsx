@@ -1,45 +1,47 @@
-import React from "react";
+import { FunctionComponent } from "react";
+import SectionComponent from "./SectionComponent";
 
-import Title from "./Title";
-import Container from "./Container";
-import BgImage from "./BgImage";
-
-export default function About() {
-    return (
-        <Container id="about">
-            <Title title="About" className="text-5xl mb-4" />
-            <div className="flex">
-                <div className="flex flex-col w-1/2">
-                    <Title title="About Me" />
-                    <p className="font-medium py-4">
-                        As a seasoned web developer, I thrive on turning ideas
-                        into digital experiences. With a degree in Engineering
-                        in Information Technologies, my journey began as a
-                        trainee during my second year of college, immersing
-                        myself in HTML5, CSS, and JavaScript. Fast forward three
-                        years, and I had evolved into a valuable asset at
-                        OCapital, where I led projects involving a migration to
-                        Gatsby, the creation of a new dashboard using React, and
-                        intricate API integrations.
-                    </p>
-                    <p className="font-medium py-4">
-                        My freelancing ventures have been equally exciting. I
-                        {"'"}ve not just led projects, but taken charge of
-                        architecture, responsiveness, and seamless API
-                        integrations. I believe in delivering not just code but
-                        optimal user experiences that leave a lasting impact.
-                    </p>
+const About: FunctionComponent = () => (
+    <SectionComponent id="about">
+        <div className="container space-y-8 px-4 md:px-6">
+            <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    About Me
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                        <p className="text-gray-600 dark:text-gray-400 md:text-xl">
+                            I{"'"}m a Front-End developer with a passion for
+                            creating innovative solutions. I have experience in
+                            a variety of technologies, including React, Next.js,
+                            Node.js, and more.
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 md:text-xl">
+                            My journey in web development started at a young
+                            age, and I{"'"}ve been continuously learning and
+                            growing ever since. I love working on challenging
+                            projects and finding creative ways to solve
+                            problems.
+                        </p>
+                    </div>
+                    <div className="space-y-4">
+                        <p className="text-gray-600 dark:text-gray-400 md:text-xl">
+                            When I{"'"}m not coding, you can find me exploring
+                            the great outdoors, experimenting with new recipes
+                            in the kitchen, or diving into a good book. I{"'"}m
+                            always eager to take on new adventures and learn new
+                            things.
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 md:text-xl">
+                            If you{"'"}d like to connect or learn more about my
+                            work, feel free to reach out or check out my latest
+                            projects below.
+                        </p>
+                    </div>
                 </div>
-
-                <figure className="w-1/2 flex items-center justify-center">
-                    <BgImage
-                        src="/static/images/about-me.jpg"
-                        alt="About me image"
-                        className="!w-2/5"
-                        unoptimized
-                    />
-                </figure>
             </div>
-        </Container>
-    );
-}
+        </div>
+    </SectionComponent>
+);
+
+export default About;
