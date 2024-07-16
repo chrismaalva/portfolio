@@ -26,18 +26,18 @@ const NavBar: FunctionComponent<NavBarProps> = ({
             </Link>
             <nav className="flex items-center gap-4 sm:gap-6">
                 <Link
-                    href="#projects"
-                    className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300"
-                    prefetch={false}
-                >
-                    Projects
-                </Link>
-                <Link
                     href="#about"
                     className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300"
                     prefetch={false}
                 >
                     About
+                </Link>
+                <Link
+                    href="#projects"
+                    className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300"
+                    prefetch={false}
+                >
+                    Projects
                 </Link>
                 <Link
                     href="#contact"

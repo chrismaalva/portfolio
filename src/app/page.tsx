@@ -9,8 +9,8 @@ export default function Page() {
     return (
         <main className="flex-1 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
             <Main />
-            <Projects />
             <About />
+            <Projects />
             <Contact />
         </main>
     );

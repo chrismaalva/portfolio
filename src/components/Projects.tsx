@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { projectsList } from "@/utils/projectsList";
 import SectionComponent from "./SectionComponent";
@@ -28,13 +27,14 @@ const Projects = () => (
                         <p className="text-primary-foreground mt-2">
                             {project.description}
                         </p>
-                        <Link
-                            href="#"
+                        <a
+                            href={project.url}
                             className="mt-4 inline-flex items-center justify-center rounded-md bg-primary-foreground px-4 py-2 text-sm font-medium text-primary shadow transition-all duration-300 hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                            prefetch={false}
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             View Project
-                        </Link>
+                        </a>
                     </div>
                 </div>
             ))}
