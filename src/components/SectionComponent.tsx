@@ -13,7 +13,7 @@ const SectionComponent: FunctionComponent<SectionComponentProps> = ({
     children,
 }) => {
     const sectionClasses = classNames(
-        "flex flex-col items-center justify-center h-full border-y border-gray-200 dark:border-gray-600 relative py-20",
+        "flex flex-col items-center justify-center h-full border-y border-gray-200 dark:border-gray-600 relative py-20 scroll-smooth",
         className
     );
 
